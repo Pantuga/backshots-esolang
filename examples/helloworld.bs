@@ -1,4 +1,5 @@
-﻿nnhmnnnnnnnnnn n
+﻿nnhmnnnnnnnnnn  # The Print function
+n  # The start of the string "Hello, World!\n"
   ngmmmmmmmnn
   ngng
   ngnnnnnnnng
@@ -13,4 +14,4 @@
   ngmmmmmmmmmm
   ngmmmnnn
   ngm
-n
+n  # The end of the string
