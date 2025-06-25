@@ -1,0 +1,9 @@
+﻿nnh nm  # Declare 'nm'
+nnhmmn ng  # Read input
+nnnhn nm ngn  # Set 'nm' to 1
+
+nnnhmmnnnnn nnnhmn nm ng  # While 'nm' != 0
+n
+  nnnhn nm nnhmmnn ng  # Set 'nm' to the next input char
+  nnhmm nm  # Print 'nm'
+n

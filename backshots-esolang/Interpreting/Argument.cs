@@ -6,26 +6,26 @@ using System.Threading.Tasks;
 
 namespace BackshotsEsolang.Interpreting
 {
-    public class Argument(bool isArray)
+    public class Argument()
     {
-        public bool IsArray = isArray;
-
         public override string ToString()
         {
             return "No Value";
         }
     }
-    public class ArgumentDouble(double val) : Argument(false)
+    public class ArgumentDouble(double val) : Argument()
     {
         public readonly double Value = val;
 
         public override string ToString()
         {
+            if (double.IsInfinity(Value)) return "+/- Infinity";
+            if (double.IsNaN(Value)) return "NaN";
             return Value.ToString();
         }
     }
 
-    public class ArgumentArray(Argument[] val) : Argument(true)
+    public class ArgumentArray(Argument[] val) : Argument()
     {
         public readonly Argument[] Value = val;
 
@@ -37,7 +37,7 @@ namespace BackshotsEsolang.Interpreting
                 if(i > 0) sb.Append(", ");
                 sb.Append(Value[i].ToString());
             }
-            sb.Append("]");
+            sb.Append(']');
 
             return sb.ToString();
         }

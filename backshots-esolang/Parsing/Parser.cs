@@ -10,7 +10,7 @@ namespace BackshotsEsolang.Parsing
 {
     public class Parser(Token[] tokens)
     {
-        private Token[] _tokens = tokens;
+        private readonly Token[] _tokens = tokens;
         private int _index = 0;
 
         public static Command[] Parse(Token[] tokens)
@@ -98,7 +98,7 @@ namespace BackshotsEsolang.Parsing
             }
 
             CommandType commandType;
-            int? value = null;
+            int? value;
             if (argCount != 0) 
             {
                 value = GetTokenValue(currentToken, 1);

@@ -12,6 +12,7 @@ namespace BackshotsEsolang.Interpreting
     {
         Declare = 1000,
         Assign,
+        Delete,
 
         Negative,
         Add,
@@ -21,6 +22,13 @@ namespace BackshotsEsolang.Interpreting
         Modulus,
         Power,
 
+        EqualTo,
+        NotEqualTo,
+        GreaterThan,
+        GreaterOrEqual,
+        LessThan,
+        LessOrEqual,
+
         Not,
         And,
         Or,
@@ -28,6 +36,10 @@ namespace BackshotsEsolang.Interpreting
 
         Print,
         Read,
-        GetInput
+        GetInput,
+        
+        If,
+        IfElse,
+        While,
     }
 }
